@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  block-puller-app:
+    image: block-puller
+    container_name: block-puller-app
+    env_file: ./.env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8085:8085"
+    depends_on:
+      - db
+      - kafka1
+      - kafka2
+      - kafka3
+      - schema-registry
+      - control-center
+      - rest-proxy
+      - kafka-init-topics
+      - unleash
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+
+networks:
+  default:
+    name: block-puller
+    external: true

@@ -1,0 +1,94 @@
+{
+  "name": "TransactionRecord",
+  "namespace": "com.averiasconnect.blockpuller.model.avro",
+  "type": "record",
+  "doc": "Ethereum transaction",
+  "fields": [
+    {
+      "name": "blockHash",
+      "type": "string"
+    },
+    {
+      "name": "blockNumber",
+      "type": "string"
+    },
+    {
+      "name": "from",
+      "type": "string"
+    },
+    {
+      "name": "gas",
+      "type": "string"
+    },
+    {
+      "name": "gasPrice",
+      "type": "string"
+    },
+    {
+      "default": null,
+      "name": "maxFeePerGas",
+      "type": ["null", "string"]
+    },
+    {
+      "default": null,
+      "name": "maxPriorityFeePerGas",
+      "type": ["null", "string"]
+    },
+    {
+      "name": "hash",
+      "type": "string"
+    },
+    {
+      "default": null,
+      "name": "input",
+      "type": ["null", "string"]
+    },
+    {
+      "name": "nonce",
+      "type": "string"
+    },
+    {
+      "default": null,
+      "name": "to",
+      "type": ["null", "string"]
+    },
+    {
+      "name": "transactionIndex",
+      "type": "string"
+    },
+    {
+      "name": "value",
+      "type": "string"
+    },
+    {
+      "name": "type",
+      "type": "string"
+    },
+    {
+      "default": null,
+      "name": "chainId",
+      "type": ["null", "string"]
+    },
+    {
+      "name": "v",
+      "type": "string"
+    },
+    {
+      "name": "r",
+      "type": "string"
+    },
+    {
+      "name": "s",
+      "type": "string"
+    },
+    {
+      "default": null,
+      "name": "yParity",
+      "type": ["null", "string"]
+    },
+    {
+      "name": "timestamp",
+      "type": "string"
+    }
+  ]
+}
